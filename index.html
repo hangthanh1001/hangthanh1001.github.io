@@ -1,228 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>hằng thanh | portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[tên m] | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a; /* GIỮ MÀU DARK NAVY */
-      color: #e2e8f0;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 40px;
-      z-index: 1000;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #e2e8f0;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 140px 10% 80px;
-      gap: 40px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      color: #94a3b8;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #38bdf8;
-      color: black;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-
-    /* AVATAR IMAGE */
-    .avatar img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #38bdf8;
-    }
-
-    section {
-      padding: 80px 10%;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    /* PROJECT */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 15px;
-      transition: 0.3s;
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.8s ease;
-    }
-
-    /* CONTACT */
-    .contact {
-      text-align: center;
-      padding: 60px 10%;
-      background: #0b1220;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <div><b>hằng thanh</b></div>
-  <div>
-    <a href="#about">about</a>
-    <a href="#projects">projects</a>
-    <a href="#contact">contact</a>
-  </div>
-</nav>
+<!-- NAV -->
+<header class="header">
+  <nav class="nav container">
+    <a href="#hero" class="logo">[initials m]</a>
 
-<div class="hero">
-  <div>
-    <h1>hi, i’m hằng thanh 👋</h1>
-    <p>beginner developer • building aesthetic portfolio</p>
-    <a class="btn" href="#projects">see my work</a>
+    <ul class="menu">
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <p>hello, i'm</p>
+    <h1>[tên m]</h1>
+    <p>[1 câu mô tả m – student/dev/designer]</p>
+
+    <a href="#projects" class="btn">view projects</a>
   </div>
 
-  <!-- 🔥 AVATAR IMAGE (m đổi link ảnh của m vào đây) -->
-  <div class="avatar">
-    <img src="https://i.imgur.com/8Km9tLL.jpg" alt="avatar"/>
+  <div class="hero-img">
+    <img src="images/avatar.jpg" />
   </div>
-</div>
-
-<section id="about">
-  <h2>about me</h2>
-  <p>
-    t đang học web dev + UI design. thích style clean, dark aesthetic và build project đẹp.
-  </p>
 </section>
 
-<section id="projects">
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>about me</h2>
+  <p>[m học gì]</p>
+  <p>[m thích gì]</p>
+  <p>[m đang làm gì]</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
   <h2>projects</h2>
 
   <div class="grid">
 
     <div class="card">
-      <img src="https://i.imgur.com/0y0y0y0.jpg" />
-      <h3>project 1</h3>
-      <p>mô tả project</p>
+      <img src="images/project1.jpg">
+      <h3>[project 1]</h3>
+      <p>[mô tả ngắn]</p>
     </div>
 
     <div class="card">
-      <img src="https://i.imgur.com/0y0y0y0.jpg" />
-      <h3>project 2</h3>
-      <p>mô tả project</p>
+      <img src="images/project2.jpg">
+      <h3>[project 2]</h3>
+      <p>[mô tả ngắn]</p>
     </div>
 
     <div class="card">
-      <img src="https://i.imgur.com/0y0y0y0.jpg" />
-      <h3>project 3</h3>
-      <p>mô tả project</p>
+      <img src="images/project3.jpg">
+      <h3>[project 3]</h3>
+      <p>[mô tả ngắn]</p>
     </div>
 
   </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- CONTACT -->
+<section id="contact" class="section contact">
   <h2>contact</h2>
-  <p>email: yourmail@gmail.com</p>
+  <p>[email m]</p>
 </section>
 
 <footer>
-  © 2026 hằng thanh
+  © 2026 [tên m]
 </footer>
 
-<script>
-  // ✨ scroll fade-in animation
-  const cards = document.querySelectorAll('.card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
