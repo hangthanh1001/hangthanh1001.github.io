@@ -1,25 +1,11 @@
-document.querySelectorAll('a').forEach(anchor=>{
+const cards = document.querySelectorAll(".card");
 
-anchor.addEventListener(
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
 
-'click',
-
-function(e){
-
-e.preventDefault()
-
-document.querySelector(
-
-this.getAttribute('href')
-
-).scrollIntoView({
-
-behavior:"smooth"
-
-})
-
-}
-
-)
-
-})
+cards.forEach(card => observer.observe(card));
